@@ -5,3 +5,17 @@ export const fetchQuotes = () => dispatch => {
       dispatch({ type: "FETCH_QUOTES_COMPLETED", payload: quotes })
     );
 };
+
+export const getRandomQuote = quoteId => {
+  return {
+    type: "RANDOM_QUOTE",
+    payload: quoteId
+  };
+};
+
+export const getCharacterQuote = character => {
+  return {
+    type: "CHARACTER_QUOTE",
+    payload: character
+  };
+};

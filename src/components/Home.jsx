@@ -1,10 +1,16 @@
 import React from "react";
+// import CharacterCards from "./CharacterCards";
+import QuotesContainer from "../containers/QuotesContainer";
 
 const Home = () => (
   <div>
-    <br />
     <h1 align="center">Hello... Newman</h1>
-    <p>Each character card</p>
+    <p className="center">
+      Select your favorite character or hit the button for a random quote.
+    </p>
+    <br />
+    <QuotesContainer />
+    <br />
   </div>
 );
 
