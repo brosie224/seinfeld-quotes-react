@@ -55,8 +55,11 @@ nav li:hover {
   padding-left: 55px;
 }
 
-.no-bullets {
+.many-quotes {
   list-style: none;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 18px;
 }
 
 .button-color {

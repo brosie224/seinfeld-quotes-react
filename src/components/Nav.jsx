@@ -12,11 +12,11 @@ const navStyle = {
 const Nav = () => (
   <nav>
     <img src={Logo} height="50" alt="logo" />
-    {/* <li>
+    <li>
       <Link to="/" style={navStyle}>
-        Home
+        Quotes
       </Link>
-    </li> */}
+    </li>
     <li>
       <Link to="add-quote" style={navStyle}>
         Add Quote
@@ -24,7 +24,7 @@ const Nav = () => (
     </li>
     <li>
       <Link to="/search" style={navStyle}>
-        Search Quotes (move to right as input box)
+        Search (move to right as input box)
       </Link>
     </li>
   </nav>

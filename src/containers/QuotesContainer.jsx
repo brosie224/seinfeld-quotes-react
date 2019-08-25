@@ -24,22 +24,11 @@ class QuotesContainer extends Component {
 
   handleCharacter = e => {
     e.preventDefault();
-    // this.props.getCharacterQuote(e.target.textContent);
     this.props.getCharacterQuote(e.target.name);
   };
 
   render() {
-    if (this.props.quotes.filtered.length === 0) {
-      return (
-        <div>
-          <CharacterCards
-            handleRandom={this.handleRandom}
-            handleCharacter={this.handleCharacter}
-          />
-        </div>
-      );
-    }
-    if (this.props.quotes.filtered.length === 1) {
+    if (this.props.quotes.filtered.length < 2) {
       return (
         <div>
           <CharacterCards

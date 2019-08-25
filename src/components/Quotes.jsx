@@ -18,11 +18,11 @@ const Quotes = props => {
   return (
     <div>
       <br />
-      <h1 className="indent-head">{props.quotes.filtered[0].character}</h1>
+      {/* <h1 className="indent-head">{props.quotes.filtered[0].character}</h1>
       {charImgs[props.quotes.filtered[0].character]}
       <br />
-      <br />
-      <ul className="no-bullets">
+      <br /> */}
+      <ul className="many-quotes">
         {props.quotes.filtered.map(quote => (
           <li key={quote.id}>
             {quote.content}
