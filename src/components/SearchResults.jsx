@@ -1,6 +1,9 @@
 import React from "react";
 
 const SearchResults = props => {
+  if (props.searched === "less") {
+    return <p>Please enter at least 3 characters.</p>;
+  }
   if (props.results.length === 0 && props.searched === true) {
     return <p>No Results.</p>;
   }

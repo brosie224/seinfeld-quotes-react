@@ -27,6 +27,12 @@ class SearchContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.query.length < 3) {
+      return this.setState({
+        ...this.state,
+        searched: "less"
+      });
+    }
     this.setState({
       ...this.state,
       results: this.state.quotes.filter(quote =>
@@ -49,6 +55,7 @@ class SearchContainer extends Component {
         <SearchResults
           results={this.state.results}
           searched={this.state.searched}
+          // query={this.state.query}
         />
       </div>
     );
