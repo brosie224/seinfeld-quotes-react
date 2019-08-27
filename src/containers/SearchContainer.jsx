@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchResults from "../components/SearchResults";
+import SeinfeldPic from "../images/seinfeldBackground.jpg";
 
 class SearchContainer extends Component {
   state = {
@@ -57,6 +58,7 @@ class SearchContainer extends Component {
           results={this.state.results}
           searched={this.state.searched}
         />
+        <img className="search-img" src={SeinfeldPic} alt="Seinfeld" />
       </div>
     );
   }
