@@ -1,4 +1,5 @@
 import React from "react";
+import SeinfeldPic from "../images/seinfeldBackground.jpg";
 
 const SearchResults = props => {
   if (props.searched === "less") {
@@ -9,11 +10,14 @@ const SearchResults = props => {
   }
   return (
     <div>
-      {props.results.map(result => (
-        <p key={result.id}>
-          {result.content} ({result.character})
-        </p>
-      ))}
+      <div className="rel">
+        {props.results.map(result => (
+          <p key={result.id}>
+            {result.content} ({result.character})
+          </p>
+        ))}
+      </div>
+      <img className="search-img" src={SeinfeldPic} alt="Seinfeld" />
     </div>
   );
 };
