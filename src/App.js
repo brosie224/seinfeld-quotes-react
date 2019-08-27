@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import QuotesContainer from "./containers/QuotesContainer";
 import SearchContainer from "./containers/SearchContainer";
 import NoMatch from "./components/NoMatch";
 
@@ -14,7 +13,6 @@ function App() {
       <div className="main">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/quotes" component={QuotesContainer} />
           <Route exact path="/search" component={SearchContainer} />
           <Route component={NoMatch} />
         </Switch>

@@ -27,11 +27,12 @@ class SearchContainer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const content = this.state.quotes.map(quote => quote.content);
     this.setState({
       ...this.state,
-      results: content.filter(quote =>
-        quote.toLowerCase().includes(this.state.query.toLowerCase())
+      results: this.state.quotes.filter(quote =>
+        quote.content
+          .toLowerCase()
+          .includes(this.state.query.toLocaleLowerCase())
       ),
       searched: true
     });
@@ -39,7 +40,7 @@ class SearchContainer extends Component {
 
   render() {
     return (
-      <>
+      <div className="search">
         <form onSubmit={this.handleSubmit}>
           <input placeholder="Search" onChange={this.handleChange} />
           <button type="submit">Search</button>
@@ -49,7 +50,7 @@ class SearchContainer extends Component {
           results={this.state.results}
           searched={this.state.searched}
         />
-      </>
+      </div>
     );
   }
 }

@@ -59,7 +59,7 @@ class CharacterCards extends Component {
   render() {
     const characters = ["Jerry", "George", "Elaine", "Kramer"];
     const fontStyle = {
-      fontSize: 26,
+      fontSize: 24,
       textAlign: "center"
     };
 

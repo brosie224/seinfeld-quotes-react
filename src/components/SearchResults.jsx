@@ -5,14 +5,14 @@ const SearchResults = props => {
     return <p>No Results.</p>;
   }
   return (
-    <ul>
-      {props.results.map((result, i) => (
-        <li key={i}>{result}</li>
+    <div>
+      {props.results.map(result => (
+        <p key={result.id}>
+          {result.content} ({result.character})
+        </p>
       ))}
-    </ul>
+    </div>
   );
 };
-
-// if results === 0
 
 export default SearchResults;
