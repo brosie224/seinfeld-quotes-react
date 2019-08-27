@@ -69,7 +69,6 @@ class CharacterCards extends Component {
           <CardDeck>
             {characters.map((character, i) => (
               <Card
-                // name={character}
                 onClick={e => {
                   this.handleImageChange(character);
                   this.props.handleCharacter(e);

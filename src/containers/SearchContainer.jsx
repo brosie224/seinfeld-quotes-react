@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SearchResults from "../components/SearchResults";
 
 class SearchContainer extends Component {
   state = {
@@ -23,16 +24,30 @@ class SearchContainer extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    const content = this.state.quotes.map(quote => quote.content);
+
+    this.setState({
+      results: content.filter(quote => quote.includes(this.state.query))
+    });
+  };
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input placeholder="Search" onChange={this.handleChange} />
-        <button type="submit">Search</button>
-        {this.state.query}
-        {this.state.quotes.map(quote => (
-          <h3>{quote.character}</h3>
+      <>
+        <form onSubmit={this.handleSubmit}>
+          <input placeholder="Search" onChange={this.handleChange} />
+          <button type="submit">Search</button>
+        </form>
+        {/* <SearchResults results={this.state.results} /> */}
+        Query: {this.state.query}
+        <br />
+        Results:{" "}
+        {this.state.results.map(result => (
+          <li>{result}</li>
         ))}
-      </form>
+      </>
     );
   }
 }
