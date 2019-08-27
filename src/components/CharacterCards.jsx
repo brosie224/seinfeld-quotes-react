@@ -49,7 +49,7 @@ class CharacterCards extends Component {
       [character]: (
         <Card.Img
           height="85%"
-          name="Jerry"
+          name={character}
           src={process.env.PUBLIC_URL + `/${character}Card.jpg`}
         />
       )
