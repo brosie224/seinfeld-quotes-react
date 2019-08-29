@@ -5,7 +5,6 @@ const Quotes = props => {
   return (
     <div>
       <Container>
-        <br />
         <ul className="many-quotes">
           {props.quotes.filtered.map(quote => (
             <li key={quote.id}>

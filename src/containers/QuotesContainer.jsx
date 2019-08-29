@@ -6,8 +6,8 @@ import {
   getCharacterQuote
 } from "../redux/actions/quotesActions";
 import CharacterCards from "../components/CharacterCards";
-import Quotes from "../components/Quotes";
 import SingleQuote from "../components/SingleQuote";
+import CharacterQuote from "../components/CharacterQuote";
 
 class QuotesContainer extends Component {
   componentDidMount() {
@@ -45,7 +45,11 @@ class QuotesContainer extends Component {
           handleRandom={this.handleRandom}
           handleCharacter={this.handleCharacter}
         />
-        <Quotes quotes={this.props.quotes} />
+        {this.props.quotes.filtered.map(quote => (
+          <ul className="many-quotes">
+            <CharacterQuote key={quote.id} quote={quote} />
+          </ul>
+        ))}
       </div>
     );
   }

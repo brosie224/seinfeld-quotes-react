@@ -93,6 +93,7 @@ class CharacterCards extends Component {
           >
             Random Quote
           </Button>
+          <br />
         </Container>
       </div>
     );
