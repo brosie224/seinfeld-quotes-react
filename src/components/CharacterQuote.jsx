@@ -16,7 +16,10 @@ class NewQuote extends Component {
     const { quote } = this.props;
     return (
       <Container>
-        {quote.content} <button onClick={this.handleUpVote}>+</button>{" "}
+        {quote.content}{" "}
+        <button className="vote" onClick={this.handleUpVote}>
+          +
+        </button>{" "}
         {this.state.votes}
       </Container>
     );

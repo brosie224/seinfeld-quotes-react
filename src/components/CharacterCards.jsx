@@ -74,7 +74,7 @@ class CharacterCards extends Component {
                   this.props.handleCharacter(e);
                 }}
                 key={i}
-                style={{ width: "18rem" }}
+                style={{ width: "18rem", cursor: "pointer" }}
               >
                 {this.state[character]}
                 <Card.Title style={fontStyle}>{character}</Card.Title>

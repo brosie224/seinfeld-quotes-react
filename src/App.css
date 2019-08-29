@@ -114,3 +114,11 @@ p.center {
 form.search {
   position: fixed;
 }
+
+.vote {
+  background-color: rgb(241, 213, 77);
+  color: rgb(204, 41, 51);
+  font-size: 14px;
+  padding: 0px 4px;
+  border-radius: 4px;
+}
