@@ -6,7 +6,7 @@ import {
   getCharacterQuote
 } from "../redux/actions/quotesActions";
 import CharacterCards from "../components/CharacterCards";
-import SingleQuote from "../components/SingleQuote";
+import RandomQuote from "../components/RandomQuote";
 import CharacterQuote from "../components/CharacterQuote";
 
 class QuotesContainer extends Component {
@@ -35,7 +35,7 @@ class QuotesContainer extends Component {
             handleRandom={this.handleRandom}
             handleCharacter={this.handleCharacter}
           />
-          <SingleQuote quotes={this.props.quotes} />
+          <RandomQuote quotes={this.props.quotes} />
         </div>
       );
     }
