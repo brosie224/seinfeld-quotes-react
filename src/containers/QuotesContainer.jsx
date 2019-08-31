@@ -14,10 +14,6 @@ class QuotesContainer extends Component {
     this.props.fetchQuotes();
   }
 
-  componentDidUpdate() {
-    window.scrollTo(0, 150);
-  }
-
   handleRandom = e => {
     e.preventDefault();
     const randomQuoteId = Math.floor(
@@ -29,6 +25,7 @@ class QuotesContainer extends Component {
   handleCharacter = e => {
     e.preventDefault();
     this.props.getCharacterQuote(e.target.name);
+    window.scrollTo(0, 150);
   };
 
   render() {

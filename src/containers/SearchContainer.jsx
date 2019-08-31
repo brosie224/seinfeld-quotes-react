@@ -43,6 +43,7 @@ class SearchContainer extends Component {
       ),
       searched: true
     });
+    window.scrollTo(0, 0);
   };
 
   render() {
