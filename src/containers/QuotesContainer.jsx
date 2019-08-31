@@ -14,6 +14,10 @@ class QuotesContainer extends Component {
     this.props.fetchQuotes();
   }
 
+  componentDidUpdate() {
+    window.scrollTo(0, 150);
+  }
+
   handleRandom = e => {
     e.preventDefault();
     const randomQuoteId = Math.floor(
@@ -45,10 +49,12 @@ class QuotesContainer extends Component {
           handleRandom={this.handleRandom}
           handleCharacter={this.handleCharacter}
         />
+
         {this.props.quotes.filtered.map(quote => (
-          <ul className="many-quotes">
-            <CharacterQuote key={quote.id} quote={quote} />
-          </ul>
+          <div key={quote.id}>
+            <CharacterQuote quote={quote} />
+            <br />
+          </div>
         ))}
       </div>
     );
