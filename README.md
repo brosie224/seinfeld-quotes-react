@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Before Beginning...
+
+Please run the API (https://github.com/brosie224/seinfeld-quotes-api) on [http://localhost:3001](http://localhost:3001) in your browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
